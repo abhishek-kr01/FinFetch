@@ -1,0 +1,121 @@
+.auth-layout {
+  display: flex;
+  min-height: 100vh;
+}
+
+.auth-layout-container {
+  flex: 1;
+  max-width: 500px;
+  padding: var(--spacing-xl);
+  display: flex;
+  flex-direction: column;
+  background-color: var(--background-main);
+}
+
+.auth-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--spacing-xl);
+}
+
+.auth-logo-link {
+  text-decoration: none;
+}
+
+.theme-toggle-btn {
+  background: none;
+  border: none;
+  color: var(--text-primary);
+  font-size: var(--font-size-xl);
+  cursor: pointer;
+  padding: var(--spacing-sm);
+  border-radius: var(--border-radius-full);
+  transition: background-color var(--transition-fast);
+}
+
+.theme-toggle-btn:hover {
+  background-color: var(--background-alt);
+}
+
+.auth-content {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.auth-footer {
+  margin-top: auto;
+  padding: var(--spacing-lg) 0;
+  color: var(--text-secondary);
+  font-size: var(--font-size-sm);
+  text-align: center;
+}
+
+.auth-background {
+  flex: 1;
+  background: linear-gradient(
+    135deg,
+    var(--primary-dark),
+    var(--primary-color)
+  );
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--spacing-xxl);
+  position: relative;
+  overflow: hidden;
+}
+
+.auth-background::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image: url("/images/finance-pattern.svg");
+  background-size: cover;
+  opacity: 0.1;
+}
+
+.auth-quote {
+  color: white;
+  text-align: center;
+  max-width: 600px;
+  position: relative;
+  z-index: 1;
+}
+
+.auth-quote h2 {
+  font-size: var(--font-size-xxl);
+  margin-bottom: var(--spacing-md);
+  line-height: 1.4;
+  color: white;
+}
+
+.auth-quote p {
+  font-size: var(--font-size-lg);
+  opacity: 0.8;
+}
+
+@media (max-width: 1024px) {
+  .auth-background {
+    display: none;
+  }
+
+  .auth-layout-container {
+    max-width: 100%;
+  }
+}
+
+@media (max-width: 768px) {
+  .auth-layout-container {
+    padding: var(--spacing-lg);
+  }
+
+  .auth-header {
+    margin-bottom: var(--spacing-lg);
+  }
+}

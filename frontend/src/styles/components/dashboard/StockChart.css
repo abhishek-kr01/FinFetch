@@ -1,0 +1,141 @@
+.stock-chart-card {
+  height: 100%;
+}
+
+.chart-price-info {
+  display: flex;
+  align-items: baseline;
+  margin-bottom: var(--spacing-md);
+}
+
+.current-price {
+  font-size: var(--font-size-xxl);
+  font-weight: var(--font-weight-bold);
+  margin-right: var(--spacing-md);
+}
+
+.price-change {
+  font-size: var(--font-size-md);
+  font-weight: var(--font-weight-medium);
+  padding: 4px 8px;
+  border-radius: var(--border-radius-sm);
+}
+
+.price-change.positive {
+  background-color: rgba(76, 175, 80, 0.1);
+  color: var(--accent-success);
+}
+
+.price-change.negative {
+  background-color: rgba(244, 67, 54, 0.1);
+  color: var(--accent-danger);
+}
+
+.chart-timeframe-controls {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: var(--spacing-md);
+}
+
+.timeframe-buttons {
+  display: flex;
+  gap: 2px;
+  background-color: var(--background-alt);
+  border-radius: var(--border-radius-md);
+  padding: 3px;
+}
+
+.timeframe-button {
+  background: none;
+  border: none;
+  padding: var(--spacing-sm) var(--spacing-md);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  color: var(--text-secondary);
+  cursor: pointer;
+  border-radius: var(--border-radius-sm);
+  transition: all var(--transition-fast);
+}
+
+.timeframe-button:hover {
+  color: var(--text-primary);
+}
+
+.timeframe-button.active {
+  background-color: var(--background-main);
+  color: var(--primary-color);
+  box-shadow: var(--shadow-sm);
+}
+
+.chart-container {
+  height: 300px;
+  position: relative;
+}
+
+.no-chart-data {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  text-align: center;
+  color: var(--text-secondary);
+}
+
+.watchlist-button {
+  display: flex;
+  align-items: center;
+  gap: var(--spacing-sm);
+  background: none;
+  border: 1px solid var(--border-color);
+  padding: var(--spacing-sm) var(--spacing-md);
+  border-radius: var(--border-radius-md);
+  font-size: var(--font-size-sm);
+  font-weight: var(--font-weight-medium);
+  color: var(--text-secondary);
+  cursor: pointer;
+  transition: all var(--transition-fast);
+}
+
+.watchlist-button:hover {
+  border-color: var(--primary-color);
+  color: var(--primary-color);
+}
+
+.watchlist-button.in-watchlist {
+  color: var(--primary-color);
+  border-color: var(--primary-color);
+  background-color: rgba(var(--primary-color-rgb), 0.05);
+}
+
+.watchlist-button svg {
+  font-size: var(--font-size-md);
+}
+
+@media (max-width: 768px) {
+  .chart-container {
+    height: 250px;
+  }
+
+  .current-price {
+    font-size: var(--font-size-xl);
+  }
+
+  .timeframe-button {
+    padding: var(--spacing-xs) var(--spacing-sm);
+    font-size: var(--font-size-xs);
+  }
+
+  .watchlist-button {
+    padding: var(--spacing-xs) var(--spacing-sm);
+  }
+
+  .watchlist-button span {
+    display: none;
+  }
+}
